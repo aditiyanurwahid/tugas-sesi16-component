@@ -14,9 +14,11 @@ function Counter() {
   };
 
   return (
-    <div>
+    <div className="Button">
       <button onClick={decrement}>-</button>
+      {"  "}
       <h3 style={{ display: "inline" }}>{count}</h3>
+      {"  "}
       <button onClick={increment}>+</button>
     </div>
   );

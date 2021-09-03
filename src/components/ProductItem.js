@@ -1,11 +1,5 @@
 function ProductItem({ product }) {
-  return (
-    <div>
-      <ul>
-        <li> {product} </li>
-      </ul>
-    </div>
-  );
+  return <li>{product}</li>;
 }
 
 export default ProductItem;

@@ -1,13 +1,29 @@
 import { useState } from "react";
 import ProductItem from "./ProductItem";
+import { Container } from "react-bootstrap";
 
 function ListProduct() {
-  const [product] = useState(["Toyota", "Mercedes", "BMW", "Daihatsu"]);
+  const [product] = useState([
+    {
+      name: "Avanza",
+    },
+    {
+      name: "Xenia",
+    },
+    {
+      name: "Ertiga",
+    },
+  ]);
   return (
     <>
-      {product.map((item, index) => (
-        <ProductItem index={index} product={item} />
-      ))}
+      <Container className="Produk">
+        <h3>List Produk</h3>
+        {product.map((item) => (
+          <ul>
+            <ProductItem product={item.name} />
+          </ul>
+        ))}
+      </Container>
     </>
   );
 }
